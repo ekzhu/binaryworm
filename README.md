@@ -1,4 +1,4 @@
 binaryworm
 ==========
 
-To a small game. htttp://binaryworm.meteor.com
+To a small game. See [the demo](http://binaryworm.meteor.com).

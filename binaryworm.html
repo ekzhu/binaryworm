@@ -1,0 +1,60 @@
+<head>
+  <title>Binary Worm Game</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Binary Worm Game</h1>
+    {{> display}}
+    {{> controls}}
+    {{> credit}}
+  </div>
+</body>
+
+<template name="display">
+  {{> worm}}
+  {{> win}}
+</template>
+
+<template name="controls">
+  <div class="container controls-container">
+    <input type="button" class="get-new-worm" value="Get New Worm" />
+    {{#if isOneOnRight}}
+      <input type="button" class="pop-right-add-one-on-left" value="Remove Right End and Place 1 on Left" />
+      <input type="button" class="pop-right-add-zero-on-left" value="Remove Right End and Place 0 on Left" />
+    {{else}}
+      <input type="button" class="pop-right" value="Remove Right End and Get Random on Left" />
+    {{/if}}
+  </div>
+</template>
+
+<template name="worm">
+  <div class="container worm-container">
+    {{#each worm}}
+      {{#if bit}}
+        <li class="black">{{bit}}</li>
+      {{else}}
+        <li>{{bit}}</li>
+      {{/if}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="win">
+  {{#if win}}
+    <div class="container">
+      <h1>You won!</h1>
+    </div>
+  {{/if}} 
+</template>
+
+<template name="credit">
+  <div class="container footer-container">
+    <div class="rules">
+      See <a href="http://www.cs.cmu.edu/puzzle/puzzle37.html">rules</a>. Chrome/Safari only.
+    </div>
+    <div class="author">
+      Made by <a href="http://40stgeorge.net">Eric</a>
+    </div>
+  </div>
+</template>

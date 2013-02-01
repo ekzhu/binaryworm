@@ -1,0 +1,39 @@
+.wrapper {
+	margin: auto auto;
+	width: 600px;
+}
+
+.container {
+	padding: 20px 0px;
+	clear: both;
+	margin: auto auto;
+}
+
+.worm-container {
+	
+}
+
+.worm-container li {
+	list-style: none;
+	float: left;
+	border: 1px #000 solid;
+	padding: 5px;
+	margin-right: 2px;
+}
+
+.worm-container li.black {
+	background: black;
+	color: white;
+}
+
+.controls-container {
+	
+}
+
+.footer-container .rules {
+	float: left;
+}
+
+.footer-container .author {
+	float: right;
+}
